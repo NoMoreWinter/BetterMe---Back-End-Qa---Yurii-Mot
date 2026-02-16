@@ -50,6 +50,8 @@
           "listen": "prerequest",
           "script": {
             "exec": [
+              "const baseUrl = pm.collectionVariables.get('baseUrl') || 'https://petstore.swagger.io/v2';",
+              "pm.collectionVariables.set('baseUrl', baseUrl);",
               "const petId = Math.floor(Math.random() * 10000); // Generate a random petId and assign it to the petId variable in the collection\r",
               "pm.collectionVariables.set('petId', petId);\r",
               "\r",
